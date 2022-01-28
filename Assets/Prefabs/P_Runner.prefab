@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 729165551218996233}
   - component: {fileID: 910947105}
   m_Layer: 0
-  m_Name: P_RunnerPlayer
+  m_Name: P_Runner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -45,7 +45,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9666c8b2c32cc7446bc3b4ba80e60f3e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 0.01
+  moveSpeed: 1
 --- !u!54 &910947105
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -60,7 +60,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 112
   m_CollisionDetection: 0
 --- !u!1 &8289808920518727415
 GameObject:
@@ -75,7 +75,7 @@ GameObject:
   - component: {fileID: 9123173031863065035}
   - component: {fileID: 1411658939292371025}
   m_Layer: 0
-  m_Name: RunnerPlayerMesh
+  m_Name: RunnerMesh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

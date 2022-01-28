@@ -123,6 +123,63 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &241534677 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1991016995492178097, guid: 62e7a9bc6c9e3bb4e8d56a604a17006a, type: 3}
+  m_PrefabInstance: {fileID: 1709825737}
+  m_PrefabAsset: {fileID: 0}
+--- !u!64 &241534678
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 241534677}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -5596202524400825144, guid: 939218162e71bd5449d3313bf67ef196, type: 3}
+--- !u!1 &264787027 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8021982825778730359, guid: 2cea59389e6e5994dbe037ed1731c5e0, type: 3}
+  m_PrefabInstance: {fileID: 1288111130}
+  m_PrefabAsset: {fileID: 0}
+--- !u!64 &264787028
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 264787027}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4056572268465193048, guid: bf667c4e0bd931d4682483c058a98ebc, type: 3}
+--- !u!1 &431364284 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 420683500333379766, guid: d130ff413e09d6541ae2ebf61a615c91, type: 3}
+  m_PrefabInstance: {fileID: 1777319582}
+  m_PrefabAsset: {fileID: 0}
+--- !u!64 &431364285
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 431364284}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 8448087925383853324, guid: 3b88a64469f0d3b4a9e51b3f98800cb9, type: 3}
 --- !u!1 &447502302
 GameObject:
   m_ObjectHideFlags: 0
@@ -259,10 +316,29 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 729165551218996234, guid: 41f969a33c4ad3049aed90bb315cd68f, type: 3}
       propertyPath: m_Name
-      value: P_RunnerPlayer
+      value: P_Runner
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 41f969a33c4ad3049aed90bb315cd68f, type: 3}
+--- !u!1 &626971604 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2767936797577148518, guid: cca04ee4c3a43c946908379e29df916a, type: 3}
+  m_PrefabInstance: {fileID: 1031916771}
+  m_PrefabAsset: {fileID: 0}
+--- !u!64 &626971605
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 626971604}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 8169044024069081611, guid: 425b80418656de04f88355cd4757af2d, type: 3}
 --- !u!1001 &1031916771
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -649,21 +725,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: P_InvisibleWall
       objectReference: {fileID: 0}
-    - target: {fileID: 7154223546962492875, guid: f5fdb644bf2d95c4eb24a97e86f59bdb, type: 3}
-      propertyPath: m_Size.x
-      value: 50
-      objectReference: {fileID: 0}
-    - target: {fileID: 7154223546962492875, guid: f5fdb644bf2d95c4eb24a97e86f59bdb, type: 3}
-      propertyPath: m_Size.y
-      value: 50
-      objectReference: {fileID: 0}
     - target: {fileID: 7154223546962492876, guid: f5fdb644bf2d95c4eb24a97e86f59bdb, type: 3}
       propertyPath: m_RootOrder
       value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 7154223546962492876, guid: f5fdb644bf2d95c4eb24a97e86f59bdb, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.4999984
+      value: -0.5
       objectReference: {fileID: 0}
     - target: {fileID: 7154223546962492876, guid: f5fdb644bf2d95c4eb24a97e86f59bdb, type: 3}
       propertyPath: m_LocalPosition.y
