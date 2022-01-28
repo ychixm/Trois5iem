@@ -2,8 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public abstract class Obstacle {
+public enum Direction : byte {
 
-    public abstract void ExecuteAction()
+    NORTH,
+    EAST,
+    SOUTH,
+    WEST
 
 }
