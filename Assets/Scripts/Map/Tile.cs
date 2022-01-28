@@ -7,11 +7,17 @@ public class Tile : Observable {
     public Obstacle obstacle;
     public List<Direction> paths;
 
-    public Tile() : this(new List<Direction>(), null) {
+    public int absoluteRow;
+    public int absoluteCol;
 
+    public Tile(int seed, Tile source, int vertical, int horizontal) : this(seed, new List<Direction>(), null) {
+        this.absoluteRow = source.absoluteRow - vertical;
+        this.absoluteCol = source.absoluteCol - horizontal;
+
+        List<Direction> generatedPaths = 
     }
 
-    public Tile(List<Direction> directions, Obstacle obstacle) {
+    public Tile(int seed, List<Direction> directions, Obstacle obstacle) {
         this.paths = directions;
         this.obstacle = obstacle;
         Notify();
