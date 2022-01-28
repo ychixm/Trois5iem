@@ -4,6 +4,6 @@ using UnityEngine;
 
 public abstract class Obstacle {
 
-    public abstract void ExecuteAction()
+    public abstract void ExecuteAction();
 
 }
