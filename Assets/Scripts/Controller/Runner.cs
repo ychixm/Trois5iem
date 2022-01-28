@@ -20,13 +20,17 @@ namespace Controller
             {
                 _rb.AddForce(Vector3.forward * moveSpeed, ForceMode.Acceleration);
             }
-            if (Input.GetKey(KeyCode.Q))
+
+            if (_rb.velocity.magnitude > 2)
             {
-                _rb.AddForce(Vector3.left * moveSpeed, ForceMode.Acceleration);
-            }
-            else if (Input.GetKey(KeyCode.D))
-            {
-                _rb.AddForce(Vector3.right * moveSpeed, ForceMode.Acceleration);
+                if (Input.GetKey(KeyCode.Q))
+                {
+                    _rb.AddForce(Vector3.left * moveSpeed, ForceMode.Acceleration);
+                }
+                else if (Input.GetKey(KeyCode.D))
+                {
+                    _rb.AddForce(Vector3.right * moveSpeed, ForceMode.Acceleration);
+                }
             }
         }
     }
