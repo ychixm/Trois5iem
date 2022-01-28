@@ -1,5 +1,4 @@
 using System.Collections.Generic;
-using Assets.Scripts.Map;
 using UnityEngine;
 
 namespace Assets.Scripts.Controller
