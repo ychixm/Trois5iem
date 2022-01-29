@@ -9,7 +9,7 @@ public class Obstacle3D : MonoBehaviour {
         /* */
     }
 
-    public virtual void Untrack(Control control) {
+    public virtual void Untrack() {
         /* */
     }
 
