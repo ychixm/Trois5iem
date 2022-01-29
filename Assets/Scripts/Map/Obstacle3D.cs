@@ -1,18 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static ObstacleManager;
 
-public class Obstacle3D : MonoBehaviour
-{
-    // Start is called before the first frame update
-    void Start()
-    {
-        
+public class Obstacle3D : MonoBehaviour {
+
+    public virtual void Track(Control control) {
+        /* */
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+    public virtual void Untrack(Control control) {
+        /* */
     }
+
 }

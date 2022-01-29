@@ -632,6 +632,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: P_TrafficLight (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 8220961762045079507, guid: 013d5948b09f106409431ea3e61d2fb1, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 013d5948b09f106409431ea3e61d2fb1, type: 3}
 --- !u!4 &395649907 stripped
