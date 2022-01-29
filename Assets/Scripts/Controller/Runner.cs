@@ -10,10 +10,14 @@ namespace Controller
         public float rotationSpeed;
 
         private Rigidbody _rb;
+
+        public GameObject Helicopter;
         
         private void Start()
         {
             _rb = GetComponent<Rigidbody>();
+
+            Instantiate(Helicopter, new Vector3(0, 15, 0), Quaternion.identity);
         }
 
         private void Update()
