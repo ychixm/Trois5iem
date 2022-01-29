@@ -9,6 +9,11 @@ public class ObstacleManager : Singleton<ObstacleManager> {
     private Dictionary<Obstacle3D, double> obstacles = new Dictionary<Obstacle3D, double>();
     public Dictionary<Control, Obstacle3D> tracked = new Dictionary<Control, Obstacle3D>();
 
+    public GameObject bollardsObstacle;
+    public GameObject pedestrianObstacle;
+    public GameObject helicopterObstacle;
+    public GameObject tramwayObstacle;
+
     public void ProcessObstacle(Obstacle3D obstacle, double distance) {
         obstacles.Add(obstacle, distance);
         
