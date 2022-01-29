@@ -2,17 +2,9 @@
 {
     public class Helicopter : Obstacle
     {
-        #region Properties
-
-        
-        
-        #endregion
-
         Helicopter()
         {
-            // collider
-            // position
-            // malus value
+            
         }
 
 
