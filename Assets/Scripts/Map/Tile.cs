@@ -10,16 +10,11 @@ public class Tile : Observable {
     public int absoluteRow;
     public int absoluteCol;
 
-    public Tile(int seed, int absoluteRow, int absoluteCol) : this(seed, new List<Direction>(), null) {
+    private bool generated = false;
+
+    public Tile(int seed, int absoluteRow, int absoluteCol, List<Direction> directions) : this(seed, directions, null) {
         this.absoluteRow = absoluteRow;
         this.absoluteCol = absoluteCol;
-    }
-
-    public Tile(int seed, Tile source, int vertical, int horizontal) : this(seed, new List<Direction>(), null) {
-        this.absoluteRow = source.absoluteRow - vertical;
-        this.absoluteCol = source.absoluteCol - horizontal;
-
-        List<Direction> generatedPaths;
     }
 
     public Tile(int seed, List<Direction> directions, Obstacle obstacle) {
@@ -28,14 +23,32 @@ public class Tile : Observable {
         Notify();
     }
 
+    public void SetGenerated(bool generated) {
+        this.generated = generated;
+    }
+
+    public bool HasBeenGenerated() {
+        return generated;
+    }
+
     public void SetPaths(List<Direction> paths) {
         this.paths = paths;
         Notify();
     }
 
+    public bool HasPath(Direction direction) {
+        return paths.Contains(direction);
+    }
+
     public void SetObstacle(Obstacle obstacle) {
         this.obstacle = obstacle;
         Notify();
+    }
+
+    public void AddPath(Direction path) {
+        if (!paths.Contains(path)) {
+            paths.Add(path);
+        }
     }
 
 }
