@@ -1,5 +1,3 @@
-using System;
-using System.Collections;
 using UnityEngine;
 
 namespace Controller
@@ -11,13 +9,15 @@ namespace Controller
 
         private Rigidbody _rb;
 
-        public GameObject Helicopter;
+        // debug only
+        public GameObject helicopter;
         
         private void Start()
         {
             _rb = GetComponent<Rigidbody>();
 
-            Instantiate(Helicopter, new Vector3(0, 15, 0), Quaternion.identity);
+            // debug only
+            Instantiate(helicopter, new Vector3(0, 15, 0), Quaternion.identity);
         }
 
         private void Update()
@@ -26,8 +26,12 @@ namespace Controller
             {
                 _rb.AddForce(transform.forward * moveSpeed, ForceMode.Acceleration);
             }
+            else if (Input.GetKey(KeyCode.S))
+            {
+                _rb.AddForce(-transform.forward * moveSpeed, ForceMode.Acceleration);
+            }
 
-            if (/*_rb.velocity.magnitude > 2*/true)
+            if (_rb.velocity.magnitude > 0)
             {
                 if (Input.GetKey(KeyCode.Q))
                 {

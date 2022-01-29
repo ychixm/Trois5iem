@@ -46,10 +46,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2fb15e12b25afe4cbf2cc70b4a6fc3a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MalusValue: 2
-  IsSlowingRunner: 0
-  IsLightOn: 0
-  CameraTransform: {fileID: 0}
+  cameraTransform: {x: 0, y: 15, z: 0}
+  malusValue: 2.5
+  isSlowingRunner: 0
+  isLightOn: 0
 --- !u!23 &5442345884285753996
 MeshRenderer:
   m_ObjectHideFlags: 0
