@@ -17,6 +17,6 @@ public class DirectionHelper {
                 return Direction.WEST;
         }
         return Direction.NORTH;
-		
+
     }
 }
