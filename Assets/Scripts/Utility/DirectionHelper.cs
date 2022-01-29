@@ -19,13 +19,4 @@ public class DirectionHelper {
 
         return Direction.NORTH;
     }
-
-    public static Direction GetLeftTurnDirection(Direction direction) {
-        return Direction.NORTH;
-    }
-
-    public static Direction GetRightTurnDirection(Direction direction) {
-        return Direction.NORTH;
-    }
-
 }
