@@ -16,6 +16,8 @@ public class DirectionHelper {
             case Direction.EAST:
                 return Direction.WEST;
         }
+
+        return Direction.NORTH;
     }
 
     public static Direction GetLeftTurnDirection(Direction direction) {
