@@ -49,6 +49,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 3
   rotationSpeed: 0.5
+  Helicopter: {fileID: 3585347671255732440, guid: fbe41afa0cde98942a99032528c19fbd, type: 3}
 --- !u!54 &437223659
 Rigidbody:
   m_ObjectHideFlags: 0
