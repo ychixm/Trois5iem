@@ -12,6 +12,9 @@ public class Tile3D : MonoBehaviour, Observer {
 
     private Tile tile;
 
+    public int row;
+    public int col;
+
     public void SetTile(Tile tile) {
         if (this.tile != null) {
             this.tile.Unregister(this);
