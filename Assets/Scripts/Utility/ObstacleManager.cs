@@ -19,12 +19,10 @@ public class ObstacleManager : Singleton<ObstacleManager> {
                 break;
             }
         }
+
+
         
-            IEnumerable<KeyValuePair<Obstacle3D, double>> closestObstacles = obstacles.OrderBy(pair => obstacles[pair.Key]).Take(4);
-            Obstacle3D obstacleToUntrack = closestObstacles.Where(pair => new List<Obstacle3D> { obstacleA, obstacleB, obstacleX, obstacleY }.Contains(pair.Key)).Select(pair => pair.Key).First();
-            if (obstacleToUntrack != null) {
-                obstacleToUntrack()
-            }
+            
 
     }
 
