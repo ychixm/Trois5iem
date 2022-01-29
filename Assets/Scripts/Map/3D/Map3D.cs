@@ -24,6 +24,8 @@ public class Map3D : MonoBehaviour, Observer {
                 newTile3D.transform.SetPositionAndRotation(new Vector3(i * 10, 0, j * 10), Quaternion.identity);
 
                 tiles3D[i][j] = newTile3D.GetComponent<Tile3D>();
+                tiles3D[i][j].row = i;
+                tiles3D[i][j].col = j;
                 tiles3D[i][j].SetTile(map.GetTile(i, j));
             }
         }
