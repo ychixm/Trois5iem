@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 964082883743373157}
   - component: {fileID: 7736358728283480241}
   - component: {fileID: 4274698974189458913}
-  - component: {fileID: 1787325692643762458}
   m_Layer: 0
   m_Name: Object002
   m_TagString: Untagged
@@ -27,7 +26,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1302753037451644972}
   m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 2.043, y: 1.246, z: -0.36}
+  m_LocalPosition: {x: 2.043, y: 1.246, z: -0.469}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1283922517341780142}
@@ -82,18 +81,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &1787325692643762458
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1302753037451644972}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1221da6743f3fe4499984fe88acb0e60, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &3585347671255732440
 GameObject:
   m_ObjectHideFlags: 0
@@ -107,6 +94,7 @@ GameObject:
   - component: {fileID: 5442345884285753996}
   - component: {fileID: 6878541928139233117}
   - component: {fileID: 6403678250369700726}
+  - component: {fileID: 4893809836417807594}
   m_Layer: 0
   m_Name: P_Helicopter
   m_TagString: Untagged
@@ -209,6 +197,25 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 3.4369206
   m_Center: {x: -5.89, y: -3.3599997, z: 0}
+--- !u!95 &4893809836417807594
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3585347671255732440}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: d635cbbf9800ffc45b86834eff3794af, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &4878063222079775008
 GameObject:
   m_ObjectHideFlags: 0
@@ -313,7 +320,6 @@ GameObject:
   - component: {fileID: 5082577470923858108}
   - component: {fileID: 1781468215256517742}
   - component: {fileID: 3783095433381970796}
-  - component: {fileID: 3058379943592019768}
   m_Layer: 0
   m_Name: Object001
   m_TagString: Untagged
@@ -384,15 +390,3 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &3058379943592019768
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7881753568444382093}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1221da6743f3fe4499984fe88acb0e60, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 

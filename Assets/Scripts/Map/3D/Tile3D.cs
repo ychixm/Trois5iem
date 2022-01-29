@@ -10,6 +10,7 @@ public class Tile3D : MonoBehaviour, Observer {
     public MeshFilter meshFilter;
     public MeshRenderer meshRenderer;
 
+    public Obstacle3D obstacle;
     private Tile tile;
 
     public int row;
@@ -24,6 +25,10 @@ public class Tile3D : MonoBehaviour, Observer {
 
         if (this.tile != null) {
             this.tile.Register(this);
+        }
+
+        if (this.tile != null && this.tile.obstacle != null) {
+            obstacle.SetObstacle(this.tile.obstacle);
         }
 
         OnNotify();
