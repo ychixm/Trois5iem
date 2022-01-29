@@ -12,17 +12,23 @@ public class ObstacleManager : Singleton<ObstacleManager> {
     public void ProcessObstacle(Obstacle3D obstacle, double distance) {
         obstacles.Add(obstacle, distance);
         
-        foreach (Control control in Enum.GetValues(typeof(Control)) {
+        foreach (Control control in Enum.GetValues(typeof(Control))) {
             if (!tracked.ContainsKey(control)) {
                 tracked.Add(control, obstacle);
                 obstacle.Track(control);
-                break;
+                return;
             }
         }
 
-
-        
-            
+        IEnumerable<KeyValuePair<Obstacle3D, double>> closestObstacles = obstacles.OrderBy(pair => obstacles[pair.Key]).Take(4).Reverse();
+        foreach (KeyValuePair<Obstacle3D, double> pair in closestObstacles) {
+            if (pair.Value * 1.1 > distance) {
+                pair.Key.Untrack();
+                Control control = tracked.Where(p => p.Value == pair.Key).First().Key;
+                tracked.Add(control, obstacle);
+                obstacle.Track(control);
+            }
+        }
 
     }
 
