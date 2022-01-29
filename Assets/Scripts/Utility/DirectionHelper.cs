@@ -5,8 +5,8 @@ using UnityEngine;
 public class DirectionHelper {
 
     public static Direction GetOppositeDirection(Direction direction) {
-        switch (direction)
-        {
+
+        switch (direction) {
             case Direction.NORTH:
                 return Direction.SOUTH;
             case Direction.WEST:
@@ -16,7 +16,7 @@ public class DirectionHelper {
             case Direction.EAST:
                 return Direction.WEST;
         }
-
         return Direction.NORTH;
+		
     }
 }
