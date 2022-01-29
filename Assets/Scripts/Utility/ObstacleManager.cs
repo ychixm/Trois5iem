@@ -12,18 +12,13 @@ public class ObstacleManager : Singleton<ObstacleManager> {
     public void ProcessObstacle(Obstacle3D obstacle, double distance) {
         obstacles.Add(obstacle, distance);
         
-        foreach (Control control in Enum.GetValues(typeof(Control)) {
+        foreach (Control control in Enum.GetValues(typeof(Control))) {
             if (!tracked.ContainsKey(control)) {
                 tracked.Add(control, obstacle);
                 obstacle.Track(control);
                 break;
             }
         }
-
-
-        
-            
-
     }
 
     public enum Control {
