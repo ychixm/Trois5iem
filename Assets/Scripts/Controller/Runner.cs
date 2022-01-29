@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using UnityEngine;
 
 namespace Controller
@@ -6,6 +7,7 @@ namespace Controller
     public class Runner : MonoBehaviour
     {
         public float moveSpeed;
+        public float rotationSpeed;
 
         private Rigidbody _rb;
         
@@ -18,18 +20,18 @@ namespace Controller
         {
             if (Input.GetKey(KeyCode.Z))
             {
-                _rb.AddForce(Vector3.forward * moveSpeed, ForceMode.Acceleration);
+                _rb.AddForce(transform.forward * moveSpeed, ForceMode.Acceleration);
             }
 
-            if (_rb.velocity.magnitude > 2)
+            if (/*_rb.velocity.magnitude > 2*/true)
             {
                 if (Input.GetKey(KeyCode.Q))
                 {
-                    _rb.AddForce(Vector3.left * moveSpeed, ForceMode.Acceleration);
+                    transform.Rotate(new Vector3(0f,-rotationSpeed,0f));
                 }
                 else if (Input.GetKey(KeyCode.D))
                 {
-                    _rb.AddForce(Vector3.right * moveSpeed, ForceMode.Acceleration);
+                    transform.Rotate(new Vector3(0f,rotationSpeed,0f));
                 }
             }
         }
