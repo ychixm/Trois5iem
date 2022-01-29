@@ -1,47 +1,36 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Diagnostics;
 using Controller;
 using UnityEngine;
-using Debug = UnityEngine.Debug;
 
 public class Helicopter3D : Obstacle3D
 {
     #region Properties
 
+    public Vector3 cameraTransform = new Vector3(0,15,0);
+    public float malusValue;
+    public bool isSlowingRunner;
+    public bool isLightOn;
+    
     private SphereCollider _sphereCollider;
-    public float MalusValue;
-    public bool IsSlowingRunner;
     private Collider _runner;
-    public bool IsLightOn;
-    public Vector3 CameraTransform = new Vector3(0,15,0);
-    private float _defaultMoveSpeed = 0;
+    private float _defaultMoveSpeed;
     
     #endregion
     
-    // Start is called before the first frame update
     void Start()
-    {   
-        Debug.Log("oui");
+    {
         _sphereCollider = GetComponent<SphereCollider>();
     }
 
-    // Update is called once per frame
     void Update()
     {
-        if (IsSlowingRunner)
+        if (isSlowingRunner)
         {
-            _runner.gameObject.GetComponent<Runner>().moveSpeed = MalusValue;
-        }
-        else if(_defaultMoveSpeed != 0)
-        {
-            Debug.Log(_defaultMoveSpeed);
+            _runner.gameObject.GetComponent<Runner>().moveSpeed = malusValue;
         }
 
-        if (IsLightOn)
+        if (isLightOn)
         {
-            if(transform.position.y >= CameraTransform.y)
+            if(transform.position.y >= cameraTransform.y)
             {
                 Destroy(gameObject);
             }
@@ -57,7 +46,7 @@ public class Helicopter3D : Obstacle3D
 
         if (Input.GetKeyDown(KeyCode.U) && transform.position.y <= 5)
         {
-            IsLightOn = true;
+            isLightOn = true;
         }
     }
 
@@ -65,9 +54,8 @@ public class Helicopter3D : Obstacle3D
     {
         if (other.gameObject.GetComponent<Runner>())
         {
-            
             _defaultMoveSpeed = other.gameObject.GetComponent<Runner>().moveSpeed;
-            IsSlowingRunner = true;
+            isSlowingRunner = true;
             _runner = other;
         }
     }
@@ -76,10 +64,9 @@ public class Helicopter3D : Obstacle3D
     {
         if (other.gameObject.GetComponent<Runner>())
         {
-            IsSlowingRunner = false;
+            isSlowingRunner = false;
             _runner.gameObject.GetComponent<Runner>().moveSpeed = _defaultMoveSpeed;
             _runner = null;
-            
         }
     }
 }
