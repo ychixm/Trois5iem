@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 6032507763436552296}
   - component: {fileID: 8382098927712531618}
   - component: {fileID: 681876234}
+  - component: {fileID: 7894142268211595911}
   m_Layer: 0
   m_Name: P_Road_Cross
   m_TagString: Untagged
@@ -96,3 +97,16 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 4056572268465193048, guid: bf667c4e0bd931d4682483c058a98ebc, type: 3}
+--- !u!65 &7894142268211595911
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8021982825778730359}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 10, y: 5, z: 10}
+  m_Center: {x: 0, y: 0, z: 0}

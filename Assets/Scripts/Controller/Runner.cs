@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace Controller
@@ -47,6 +48,14 @@ namespace Controller
                 {
                     transform.Rotate(new Vector3(0f,rotationSpeed,0f));
                 }
+            }
+        }
+
+        private void OnTriggerEnter(Collider other)
+        {
+            if (other.GetComponentInParent<Tile3D>())
+            {
+                
             }
         }
     }

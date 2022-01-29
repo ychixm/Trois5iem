@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 2829817823598804398}
   - component: {fileID: 45457215003036004}
   - component: {fileID: 241534678}
+  - component: {fileID: 5134264249483053773}
   m_Layer: 0
   m_Name: P_Road_Turn
   m_TagString: Untagged
@@ -96,3 +97,16 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -5596202524400825144, guid: 939218162e71bd5449d3313bf67ef196, type: 3}
+--- !u!65 &5134264249483053773
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1991016995492178097}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 10, y: 5, z: 10}
+  m_Center: {x: 0, y: 0, z: 0}

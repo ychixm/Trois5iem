@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 4121526294372574633}
   - component: {fileID: 2222083425103417699}
   - component: {fileID: 431364285}
+  - component: {fileID: 2014120855435849441}
   m_Layer: 0
   m_Name: P_Road_T
   m_TagString: Untagged
@@ -96,3 +97,16 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 8448087925383853324, guid: 3b88a64469f0d3b4a9e51b3f98800cb9, type: 3}
+--- !u!65 &2014120855435849441
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 420683500333379766}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 10, y: 5, z: 10}
+  m_Center: {x: 0, y: 0, z: 0}
