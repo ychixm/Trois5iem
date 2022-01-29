@@ -13,12 +13,12 @@ namespace Assets.Scripts.Controller
         /// <summary>
         /// The game game state 
         /// </summary>
-        public bool IsPaused { get; set; }
+        public bool isPaused;
 
         /// <summary>
         /// List of traps controlled by the player
         /// </summary>
-        public List<Obstacle> ObstacleList { get; set; }
+        public List<Obstacle> obstacleList;
     
         #endregion
 
@@ -29,26 +29,26 @@ namespace Assets.Scripts.Controller
         /// </summary>
         public void Update()
         {
-            if (IsPaused)
+            if (isPaused)
             {
                 return;
             }
 
             if (Input.GetKeyDown(HackerControlKey.keyTrapOne))
             {
-                ObstacleList[0]?.ExecuteAction();
+                obstacleList[0]?.ExecuteAction();
             }
             if (Input.GetKeyDown(HackerControlKey.keyTrapTwo))
             {
-                ObstacleList[1]?.ExecuteAction();
+                obstacleList[1]?.ExecuteAction();
             }
             if (Input.GetKeyDown(HackerControlKey.keyTrapThree))
             {
-                ObstacleList[2]?.ExecuteAction();
+                obstacleList[2]?.ExecuteAction();
             }
             if (Input.GetKeyDown(HackerControlKey.keyTrapFour))
             {
-                ObstacleList[3]?.ExecuteAction();
+                obstacleList[3]?.ExecuteAction();
             }
 
         }
