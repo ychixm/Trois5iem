@@ -29,7 +29,6 @@ public class ObstacleManager : Singleton<ObstacleManager> {
                 obstacle.Track(control);
             }
         }
-
     }
 
     public enum Control {
