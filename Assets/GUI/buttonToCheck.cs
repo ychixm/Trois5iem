@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class mashButton : MonoBehaviour
+public class buttonToCheck : MonoBehaviour
 {
     // Start is called before the first frame update
     void Start()
@@ -14,5 +14,9 @@ public class mashButton : MonoBehaviour
     void Update()
     {
         
+    }
+    void OnTriggerEnter(Collider other)
+    {
+        Debug.Log(other.name);
     }
 }

@@ -6,9 +6,8 @@ using UnityEngine.UI;
 public class panelManager : MonoBehaviour
 {
     // Start is called before the first frame update
-
     public GameObject sphereObj;
-    public GameObject obstacle;
+    public GameObject firstZ;public GameObject secondZ;public GameObject thirdZ;public GameObject fourthZ;public GameObject fifthZ;
     Image firstC; Image secondC; Image thirdC; Image fourthC; Image fifthC;
     public Sprite aBut; public Sprite bBut;
     public Sprite xBut; public Sprite yBut;
@@ -17,13 +16,8 @@ public class panelManager : MonoBehaviour
     private void spawnSphere()
     {
         GameObject a = Instantiate(sphereObj,
-        new Vector3(0,5,-10), Quaternion.Euler(0,90,0))
+        new Vector3(0,5,-20), Quaternion.Euler(0,90,0))
         as GameObject;
-    }
-
-    private Sprite whichBut()
-    { 
-        return aBut;
     }
     void Start()
     {
@@ -34,7 +28,6 @@ public class panelManager : MonoBehaviour
         fifthC = this.transform.Find("case (4)").GetComponent<Image>();
         mashButton = this.transform.Find("mashing").GetComponent<Image>();
         mashButton.enabled = false;
-        spawnSphere();
     }
 
     // Update is called once per frame
