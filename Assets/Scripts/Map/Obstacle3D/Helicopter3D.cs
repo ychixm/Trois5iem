@@ -10,22 +10,16 @@ public class Helicopter3D : Obstacle3D
     public bool isSlowingRunner;
     public bool isLightOn;
     
-    private SphereCollider _sphereCollider;
     private Collider _runner;
-    private float _defaultMoveSpeed;
+    private float _defaultMaxSpeed;
     
     #endregion
-    
-    void Start()
-    {
-        _sphereCollider = GetComponent<SphereCollider>();
-    }
 
     void Update()
     {
         if (isSlowingRunner)
         {
-            _runner.gameObject.GetComponent<Runner>().moveSpeed = malusValue;
+            _runner.gameObject.GetComponent<Runner>().maxSpeed = malusValue;
         }
 
         if (isLightOn)
@@ -54,7 +48,7 @@ public class Helicopter3D : Obstacle3D
     {
         if (other.gameObject.GetComponent<Runner>())
         {
-            _defaultMoveSpeed = other.gameObject.GetComponent<Runner>().moveSpeed;
+            _defaultMaxSpeed = other.gameObject.GetComponent<Runner>().maxSpeed;
             isSlowingRunner = true;
             _runner = other;
         }
@@ -65,7 +59,7 @@ public class Helicopter3D : Obstacle3D
         if (other.gameObject.GetComponent<Runner>())
         {
             isSlowingRunner = false;
-            _runner.gameObject.GetComponent<Runner>().moveSpeed = _defaultMoveSpeed;
+            _runner.gameObject.GetComponent<Runner>().maxSpeed = _defaultMaxSpeed;
             _runner = null;
         }
     }

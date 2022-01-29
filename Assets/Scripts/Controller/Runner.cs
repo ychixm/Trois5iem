@@ -6,7 +6,8 @@ namespace Controller
     {
         public float moveSpeed;
         public float rotationSpeed;
-
+        public float maxSpeed;
+        
         private Rigidbody _rb;
 
         // debug only
@@ -22,6 +23,11 @@ namespace Controller
 
         private void Update()
         {
+            if (_rb.velocity.magnitude > maxSpeed)
+            {
+                _rb.velocity = _rb.velocity.normalized * maxSpeed;
+            }
+            
             if (Input.GetKey(KeyCode.Z))
             {
                 _rb.AddForce(transform.forward * moveSpeed, ForceMode.Acceleration);

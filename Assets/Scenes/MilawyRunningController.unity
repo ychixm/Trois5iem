@@ -506,6 +506,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 437223654, guid: bf57f4f02b76fe14792b2cb7725852ff, type: 3}
+      propertyPath: maxSpeed
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 437223654, guid: bf57f4f02b76fe14792b2cb7725852ff, type: 3}
+      propertyPath: helicopter
+      value: 
+      objectReference: {fileID: 3585347671255732440, guid: fbe41afa0cde98942a99032528c19fbd, type: 3}
     - target: {fileID: 2859271526778608984, guid: bf57f4f02b76fe14792b2cb7725852ff, type: 3}
       propertyPath: m_Name
       value: P_Car
