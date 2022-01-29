@@ -18,7 +18,7 @@ namespace Controller
             _rb = GetComponent<Rigidbody>();
 
             // debug only
-            Instantiate(helicopter, new Vector3(0, 15, 0), Quaternion.identity);
+            Instantiate(helicopter, new Vector3(10, 15, 0), Quaternion.identity);
         }
 
         private void Update()
