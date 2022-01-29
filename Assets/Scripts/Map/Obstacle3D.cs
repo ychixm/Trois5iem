@@ -16,8 +16,12 @@ public class Obstacle3D : MonoBehaviour {
         but.transform.rotation = Quaternion.LookRotation(-Camera.main.transform.forward);
     }
 
-    public virtual void Untrack(Control control) {
-        /* */
+    public virtual void Untrack() {
+        /* 
+         
+        Remove any visual tracking clues like colors, pings, displayed buttons ...
+
+         */
     }
 
     public void Start()

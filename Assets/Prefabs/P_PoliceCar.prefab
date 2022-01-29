@@ -26,7 +26,7 @@ Transform:
   m_GameObject: {fileID: 637991308556557769}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -0.29, y: 1.527, z: -0.11}
-  m_LocalScale: {x: 1.4285713, y: 1.4285713, z: 1.4285713}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4896448811639807581}
   m_RootOrder: 0
@@ -43,8 +43,8 @@ Light:
   m_Type: 2
   m_Shape: 0
   m_Color: {r: 0.9339623, g: 0.18062477, b: 0.18062477, a: 1}
-  m_Intensity: 25.39
-  m_Range: 0.71
+  m_Intensity: 0
+  m_Range: 0.7
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
@@ -197,6 +197,7 @@ GameObject:
   - component: {fileID: 4896448811639807581}
   - component: {fileID: 8384706164627313144}
   - component: {fileID: 6032715310655825202}
+  - component: {fileID: 7115116891643589585}
   m_Layer: 0
   m_Name: P_PoliceCar
   m_TagString: Untagged
@@ -271,6 +272,20 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &7115116891643589585
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5240077722618479847}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf257dbc8656a4944a9435b8cd08b440, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  RedLight: {fileID: 637991308556557769}
+  BlueLight: {fileID: 6751735773101404831}
 --- !u!1 &6751735773101404831
 GameObject:
   m_ObjectHideFlags: 0
@@ -297,7 +312,7 @@ Transform:
   m_GameObject: {fileID: 6751735773101404831}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0.346, y: 1.527, z: -0.11}
-  m_LocalScale: {x: 1.4285713, y: 1.4285713, z: 1.4285713}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4896448811639807581}
   m_RootOrder: 1
@@ -314,8 +329,8 @@ Light:
   m_Type: 2
   m_Shape: 0
   m_Color: {r: 0.18039215, g: 0.22773497, b: 0.93333334, a: 1}
-  m_Intensity: 25.39
-  m_Range: 0.71
+  m_Intensity: 0
+  m_Range: 0.7
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10

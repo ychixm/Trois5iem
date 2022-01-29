@@ -15,6 +15,10 @@ public class Helicopter3D : Obstacle3D
     
     #endregion
 
+    public override void OnNotify() {
+
+    }
+
     void Update()
     {
         if (isSlowingRunner)
