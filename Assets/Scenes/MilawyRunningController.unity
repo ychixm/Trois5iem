@@ -1331,25 +1331,5 @@ PrefabInstance:
       propertyPath: m_Name
       value: P_Bitts
       objectReference: {fileID: 0}
-    - target: {fileID: 2531623601116560897, guid: d91c60e3059cd584c9303a2af5b368e0, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2531623601116560899, guid: d91c60e3059cd584c9303a2af5b368e0, type: 3}
-      propertyPath: _isLifted
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2531623601730685072, guid: d91c60e3059cd584c9303a2af5b368e0, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 2531623601809762159, guid: d91c60e3059cd584c9303a2af5b368e0, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 2531623602294241860, guid: d91c60e3059cd584c9303a2af5b368e0, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 2
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d91c60e3059cd584c9303a2af5b368e0, type: 3}
