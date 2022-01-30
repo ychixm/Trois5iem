@@ -54,8 +54,12 @@ public abstract class Obstacle3D : MonoBehaviour, Observer {
     }
 
     public virtual void OnNotify() {
-        this.transform.SetPositionAndRotation(this.transform.position, Quaternion.identity);
-        this.transform.Rotate(0f, ((int)obstacle.orientation) * 90.0f, 0f);
+        if (obstacle != null) {
+            this.transform.SetPositionAndRotation(this.transform.position, Quaternion.identity);
+            this.transform.Rotate(0f, ((int)obstacle.orientation) * 90.0f, 0f);
+        } else {
+            Destroy(this);
+        }
     }
 
 }

@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 
 public class Map3D : MonoBehaviour, Observer {
@@ -24,27 +25,11 @@ public class Map3D : MonoBehaviour, Observer {
                 newTile3D.transform.SetPositionAndRotation(new Vector3(i * 10, 0, j * 10), Quaternion.identity);
 
                 tiles3D[i][j] = newTile3D.GetComponent<Tile3D>();
+                tiles3D[i][j].map3D = this;
                 tiles3D[i][j].row = i;
                 tiles3D[i][j].col = j;
                 tiles3D[i][j].SetTile(map.GetTile(i, j));
             }
-        }
-
-        StartCoroutine(testScroll());
-    }
-
-    public IEnumerator testScroll() {
-        while (true) {
-            yield return new WaitForSeconds(1f);
-            map.Scroll(Direction.NORTH);
-            string debug = "";
-            for (int i = 0; i < size; i++) {
-                for (int j = 0; j < size; j++) {
-                    debug = debug + " | " + tiles3D[i][j].GetTile().id;
-                }
-                debug = debug + "\n";
-            }
-            Debug.Log(debug);
         }
     }
 
@@ -56,4 +41,20 @@ public class Map3D : MonoBehaviour, Observer {
         }
     }
 
+    public Tile3D GetTile3D(int row, int col) {
+        return (row > 0 && row < size && col > 0 && col < size ? tiles3D[row][col] : null);
+    }
+
+}
+
+[CustomEditor(typeof(Map3D))]
+public class Map3DEditor : Editor {
+    public override void OnInspectorGUI() {
+        base.OnInspectorGUI();
+        Map3D map = (Map3D) target;
+
+        if (GUILayout.Button("Scroll NORTH")) {
+            map.map.Scroll(Direction.NORTH);
+        }
+    }
 }

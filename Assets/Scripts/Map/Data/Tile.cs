@@ -27,6 +27,12 @@ public class Tile : Observable {
         }
     }
 
+    public void RemovePath(Direction path) {
+        if (paths.Contains(path)) {
+            paths.Remove(path);
+        }
+    }
+
     public List<Direction> GetPaths() {
         return paths;
     }
