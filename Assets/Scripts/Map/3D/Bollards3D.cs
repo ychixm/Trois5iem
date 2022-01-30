@@ -1,3 +1,4 @@
+using UnityEditor;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -37,7 +38,4 @@ public class Bollards3D : Obstacle3D {
         }
     }
 
-    public override void OnNotify() {
-
-    }
 }

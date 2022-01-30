@@ -30,9 +30,7 @@ public class Tile3D : MonoBehaviour, Observer {
 
         OnNotify();
 
-        if (obstacle != null) {
-            obstacle.SetObstacle(tile.obstacle);
-        }
+        obstacle.SetObstacle(this.tile.obstacle);
     }
 
     public Tile GetTile() {
@@ -52,15 +50,6 @@ public class Tile3D : MonoBehaviour, Observer {
             transform.Rotate(0, 180, 0);
         } else if (flag == 14 || flag == 12) {
             transform.Rotate(0, 270, 0);
-        }
-
-        if (obstacle != null && tile.obstacle == null) {
-            Destroy(obstacle.gameObject);
-        } else if (this.tile.obstacle != null) {
-            GameObject prefabObstacle = PrefabManager.Instance.GetObstacle(this.tile.obstacle.type);
-            GameObject obj = Instantiate(prefabObstacle, this.transform, false);
-            obstacle = obj.GetComponent<Obstacle3D>();
-            obstacle.SetObstacle(this.tile.obstacle);
         }
     }
 

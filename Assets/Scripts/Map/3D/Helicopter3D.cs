@@ -15,13 +15,9 @@ public class Helicopter3D : Obstacle3D
     
     #endregion
 
-    public override void OnNotify() {
-
-    }
-
     void Update()
     {
-        car = GameObject.FindWithTag("Car");
+        GameObject car = GameObject.FindWithTag("Car");
         float distance = Mathf.Abs(Vector3.Distance(new Vector3(transform.position.x, 0, transform.position.z), car.transform.position));
         ObstacleManager.Instance.ProcessObstacle(this, distance);
         

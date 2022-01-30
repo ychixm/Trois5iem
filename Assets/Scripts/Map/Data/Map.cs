@@ -103,6 +103,13 @@ public class Map : Observable {
                     tiles[0, col].SetPaths(new List<Direction>());
                 }
             }
+
+            for (int col = 0; col < size; col++) {
+                float rand = UnityEngine.Random.Range(0.0f, 1.0f);
+                if (tiles[0, col].HasPath(Direction.NORTH) && rand > 0.5f) {
+                    tiles[0, col].SetObstacle(new Bollards(Direction.NORTH));
+                }
+            }
             
         }
         
