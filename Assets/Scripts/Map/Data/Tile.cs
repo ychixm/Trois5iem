@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Tile : Observable {
 
-    public string id = Mathf.CeilToInt(UnityEngine.Random.Range(1000000.0f, 10000000.0f)).ToString().Substring(0, 6);
+    public int id = Mathf.CeilToInt(UnityEngine.Random.Range(1000000.0f, 10000000.0f));
 
     public Obstacle obstacle;
     public List<Direction> paths;

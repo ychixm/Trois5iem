@@ -9,6 +9,7 @@ public class Tile3D : MonoBehaviour, Observer {
 
     public MeshFilter meshFilter;
     public MeshRenderer meshRenderer;
+    public MeshCollider meshCollider;
 
     public Obstacle3D obstacle;
     public Map3D map3D;
