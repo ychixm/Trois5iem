@@ -815,6 +815,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 869115616028030732, guid: bf57f4f02b76fe14792b2cb7725852ff, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 13400000, guid: ae754c0c941ded84689ab3b490ca37e7, type: 2}
     - target: {fileID: 2859271526778608984, guid: bf57f4f02b76fe14792b2cb7725852ff, type: 3}
       propertyPath: m_Name
       value: P_Car
