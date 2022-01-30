@@ -8,16 +8,7 @@ public class Bollards3D : Obstacle3D {
 
     private void Start()
     {
-        int value = Random.Range(0, 2);
-        
-        if (value == 0)
-        {
-            _isLifted = false;
-        }
-        else
-        {
-            _isLifted = true;
-        }
+        _isLifted = new Bollards(Direction.NORTH).activated;
     }
 
     private void Update()

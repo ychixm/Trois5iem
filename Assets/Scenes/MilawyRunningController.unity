@@ -815,6 +815,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 437223659, guid: bf57f4f02b76fe14792b2cb7725852ff, type: 3}
+      propertyPath: m_IsKinematic
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2859271526778608984, guid: bf57f4f02b76fe14792b2cb7725852ff, type: 3}
       propertyPath: m_Name
       value: P_Car
@@ -1134,7 +1138,7 @@ PrefabInstance:
       objectReference: {fileID: 437223654, guid: bf57f4f02b76fe14792b2cb7725852ff, type: 3}
     - target: {fileID: 5064858221486904796, guid: df68100a4dd39844e8882b25b8545f14, type: 3}
       propertyPath: size
-      value: 7
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 5396411809232300223, guid: df68100a4dd39844e8882b25b8545f14, type: 3}
       propertyPath: m_RootOrder
