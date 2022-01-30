@@ -42,6 +42,7 @@ public class Tile3D : MonoBehaviour, Observer {
         GameObject prefab = PrefabManager.Instance.GetRoad(tile.GetPathFlag());
         meshFilter.mesh = prefab.GetComponent<MeshFilter>().sharedMesh;
         meshRenderer.material = prefab.GetComponent<MeshRenderer>().sharedMaterial;
+        meshCollider = prefab.GetComponent<MeshCollider>();
 
         int flag = tile.GetPathFlag();
         transform.SetPositionAndRotation(transform.position, Quaternion.identity);

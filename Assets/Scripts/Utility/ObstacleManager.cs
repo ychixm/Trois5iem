@@ -31,6 +31,12 @@ public class ObstacleManager : Singleton<ObstacleManager> {
         }
     }
 
+    public void OnAction(Control control) {
+        if (tracked.ContainsKey(control)) {
+            tracked[control].OnAction();
+        }
+    }
+
     public enum Control {
 
         A,

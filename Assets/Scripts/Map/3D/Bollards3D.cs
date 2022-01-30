@@ -1,41 +1,27 @@
-using UnityEditor;
 using UnityEngine;
-using Random = UnityEngine.Random;
 
-public class Bollards3D : Obstacle3D {
+public class Bollards3D : Actionnable3D {
 
-    private bool _isLifted;
+    private Bollards bollards;
 
-    private void Start()
-    {
-        int value = Random.Range(0, 2);
-        
-        if (value == 0)
-        {
-            _isLifted = false;
-        }
-        else
-        {
-            _isLifted = true;
+    private void Start() {
+        transform.position = new Vector3(transform.position.x, bollards.activated ? 0.5f : 0.0f, transform.position.z);
+    }
+
+    private void Update() {
+        if (bollards.activated && transform.position.y < 0.5f) {
+            transform.Translate(Vector3.up * Time.deltaTime * 2f);
+        } else if (transform.position.y > 0f) {
+            transform.Translate(Vector3.down * Time.deltaTime * 2f);
         }
     }
 
-    private void Update()
-    {
-        if (_isLifted)
-        {
-            if (transform.position.y < 0.5f)
-            {
-                transform.Translate(Vector3.up * Time.deltaTime * 2f);
-            }
-        }
-        else
-        {
-            if (transform.position.y > 0f)
-            {
-                transform.Translate(Vector3.down * Time.deltaTime * 2f);    
-            }
-        }
+    public override void Initialize(Obstacle obstacle) {
+        this.bollards = (Bollards) obstacle;
+    }
+
+    public override void OnAction() {
+        bollards.ExecuteAction();
     }
 
 }

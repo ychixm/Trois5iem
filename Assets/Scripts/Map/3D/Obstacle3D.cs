@@ -7,7 +7,7 @@ using static ObstacleManager;
 public class Obstacle3D : MonoBehaviour, Observer {
 
     public Obstacle obstacle;
-    public GameObject obstacleObject;
+    public Actionnable3D actionnable;
 
     public Vector3 dist, newPos;
     public GameObject but;
@@ -15,7 +15,7 @@ public class Obstacle3D : MonoBehaviour, Observer {
     public void SetObstacle(Obstacle obstacle) {
         if (this.obstacle != null) {
             this.obstacle.Unregister(this);
-            Destroy(obstacleObject);
+            Destroy(actionnable.gameObject);
         }
 
         this.obstacle = obstacle;
@@ -23,7 +23,9 @@ public class Obstacle3D : MonoBehaviour, Observer {
         if (this.obstacle != null) {
             this.obstacle.Register(this);
             GameObject prefabObstacle = PrefabManager.Instance.GetObstacle(this.obstacle.type);
-            obstacleObject = Instantiate(prefabObstacle, this.transform, false);
+            GameObject obstacleObject = Instantiate(prefabObstacle, this.transform, false);
+            actionnable = obstacleObject.GetComponent<Actionnable3D>();
+            actionnable.Initialize(obstacle);
         }
 
         OnNotify();
@@ -56,22 +58,34 @@ public class Obstacle3D : MonoBehaviour, Observer {
          */
     }
 
+    public void OnAction() {
+        actionnable.OnAction();
+    }
+
     public void OnNotify() {
         if (obstacle != null) {
-            obstacleObject.transform.SetPositionAndRotation(this.transform.position, Quaternion.identity);
-            obstacleObject.transform.Rotate(0f, ((int) obstacle.orientation) * 90.0f, 0f);
+            actionnable.gameObject.transform.SetPositionAndRotation(this.transform.position, Quaternion.identity);
+            actionnable.gameObject.transform.Rotate(0f, ((int) obstacle.orientation) * 90.0f, 0f);
         }
     }
 
-    [CustomEditor(typeof(Obstacle3D))]
-    public class Obstacle3DEditor : Editor {
-        public override void OnInspectorGUI() {
-            base.OnInspectorGUI();
-            Obstacle3D obs = (Obstacle3D) target;
-            if (GUILayout.Button("Debug Direction")) {
-                Debug.Log("Obstacle orientation : " + obs.obstacle.orientation.ToString() + " | Rotation = " + obs.transform.rotation);
-            }
+}
+
+public abstract class Actionnable3D : MonoBehaviour {
+
+    public abstract void Initialize(Obstacle obstacle);
+
+    public abstract void OnAction();
+
+}
+
+[CustomEditor(typeof(Obstacle3D))]
+public class Obstacle3DEditor : Editor {
+    public override void OnInspectorGUI() {
+        base.OnInspectorGUI();
+        Obstacle3D obs = (Obstacle3D)target;
+        if (GUILayout.Button("Debug Direction")) {
+            Debug.Log("Obstacle orientation : " + obs.obstacle.orientation.ToString() + " | Rotation = " + obs.transform.rotation);
         }
     }
-
 }

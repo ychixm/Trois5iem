@@ -11,7 +11,8 @@ public class Bollards : Obstacle {
     }
 
     public override void ExecuteAction() {
-
+        activated = !activated;
+        Notify();
     }
 
 }
