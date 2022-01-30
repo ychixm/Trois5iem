@@ -14,11 +14,6 @@ namespace Assets.Scripts.Controller
         /// The game game state 
         /// </summary>
         public bool isPaused;
-
-        /// <summary>
-        /// List of traps controlled by the player
-        /// </summary>
-        public List<Obstacle> obstacleList;
     
         #endregion
 
@@ -29,26 +24,21 @@ namespace Assets.Scripts.Controller
         /// </summary>
         public void Update()
         {
-            if (isPaused)
-            {
+            if (isPaused) {
                 return;
             }
 
-            if (Input.GetKeyDown(HackerControlKey.keyTrapOne))
-            {
-                obstacleList[0]?.ExecuteAction();
+            if (Input.GetKeyDown(HackerControlKey.keyTrapOne)) {
+                ObstacleManager.Instance.OnAction(ObstacleManager.Control.A);
             }
-            if (Input.GetKeyDown(HackerControlKey.keyTrapTwo))
-            {
-                obstacleList[1]?.ExecuteAction();
+            if (Input.GetKeyDown(HackerControlKey.keyTrapTwo)) {
+                ObstacleManager.Instance.OnAction(ObstacleManager.Control.B);
             }
-            if (Input.GetKeyDown(HackerControlKey.keyTrapThree))
-            {
-                obstacleList[2]?.ExecuteAction();
+            if (Input.GetKeyDown(HackerControlKey.keyTrapThree)) {
+                ObstacleManager.Instance.OnAction(ObstacleManager.Control.X);
             }
-            if (Input.GetKeyDown(HackerControlKey.keyTrapFour))
-            {
-                obstacleList[3]?.ExecuteAction();
+            if (Input.GetKeyDown(HackerControlKey.keyTrapFour)) {
+                ObstacleManager.Instance.OnAction(ObstacleManager.Control.Y);
             }
 
         }
@@ -56,4 +46,11 @@ namespace Assets.Scripts.Controller
         #endregion
     
     }
+}
+
+public class HackerControlKey : MonoBehaviour {
+    public static readonly KeyCode keyTrapOne = KeyCode.U;
+    public static readonly KeyCode keyTrapTwo = KeyCode.I;
+    public static readonly KeyCode keyTrapThree = KeyCode.O;
+    public static readonly KeyCode keyTrapFour = KeyCode.P;
 }
