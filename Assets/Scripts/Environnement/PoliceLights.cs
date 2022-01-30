@@ -1,29 +1,31 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class PoliceLights : MonoBehaviour
+namespace Environnement
 {
-    public GameObject RedLight;
-    public GameObject BlueLight;
+    public class PoliceLights : MonoBehaviour
+    {
+        public GameObject redLight;
+        public GameObject blueLight;
 
-    void Start()
-    {
-        StartCoroutine(redLightBlink());
-    }
-    IEnumerator redLightBlink()
-    {
-        RedLight.GetComponent<Light>().intensity = 25f;
-        yield return new WaitForSeconds(0.5f);
-        RedLight.GetComponent<Light>().intensity = 0f;
-        StartCoroutine(blueLightBlink());
-    }
+        void Start()
+        {
+            StartCoroutine(RedLightBlink());
+        }
+        IEnumerator RedLightBlink()
+        {
+            redLight.GetComponent<Light>().intensity = 25f;
+            yield return new WaitForSeconds(0.5f);
+            redLight.GetComponent<Light>().intensity = 0f;
+            StartCoroutine(BlueLightBlink());
+        }
 
-    IEnumerator blueLightBlink()
-    {
-        BlueLight.GetComponent<Light>().intensity = 25f;
-        yield return new WaitForSeconds(0.5f);
-        BlueLight.GetComponent<Light>().intensity = 0f;
-        StartCoroutine(redLightBlink());
+        IEnumerator BlueLightBlink()
+        {
+            blueLight.GetComponent<Light>().intensity = 25f;
+            yield return new WaitForSeconds(0.5f);
+            blueLight.GetComponent<Light>().intensity = 0f;
+            StartCoroutine(RedLightBlink());
+        }
     }
 }
