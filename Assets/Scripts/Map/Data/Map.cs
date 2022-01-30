@@ -25,13 +25,9 @@ public class Map : Observable {
 
         /* First 5 tiles on the center column are linear roads. */
 
-        tiles[6, 3].SetPaths(new List<Direction> { Direction.NORTH, Direction.SOUTH });
-        tiles[5, 3].SetPaths(new List<Direction> { Direction.NORTH, Direction.SOUTH });
-        tiles[4, 3].SetPaths(new List<Direction> { Direction.NORTH, Direction.SOUTH });
-        tiles[3, 3].SetPaths(new List<Direction> { Direction.NORTH, Direction.SOUTH });
-        tiles[2, 3].SetPaths(new List<Direction> { Direction.NORTH, Direction.SOUTH });
-        tiles[1, 3].SetPaths(new List<Direction> { Direction.NORTH, Direction.SOUTH });
-        tiles[0, 3].SetPaths(new List<Direction> { Direction.NORTH, Direction.SOUTH });
+        for (int i = 0; i < size ; i++) {
+            tiles[i, (size - 1) / 2].SetPaths(new List<Direction> { Direction.NORTH, Direction.SOUTH });
+        }
 
     }
 
