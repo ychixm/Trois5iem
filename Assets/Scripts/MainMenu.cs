@@ -10,10 +10,7 @@ public class MainMenu : MonoBehaviour
 
     public void OnClickPlay()
     {
-        int nextSceneIndex = SceneManager.GetActiveScene().buildIndex;
-        nextSceneIndex++;
-        SceneManager.LoadScene(SceneManager.GetSceneByBuildIndex(nextSceneIndex));
-
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         //SceneManager.LoadScene("MilawyRunningController");
     }
 
