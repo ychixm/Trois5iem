@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class miniChase : MonoBehaviour
 {
@@ -21,6 +22,9 @@ public class miniChase : MonoBehaviour
 
     void OnCollisionEnter(Collision collisionInfo)
     {
-        
+        if(collisionInfo.collider.name == "FinishLine")
+        {
+            SceneManager.LoadScene("obsTracker");
+        }
     }
 }

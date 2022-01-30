@@ -8,7 +8,6 @@ public class policeEvent : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
     }
 
     // Update is called once per frame
@@ -17,9 +16,11 @@ public class policeEvent : MonoBehaviour
         
     }
 
-    void onCollisionEnter(Collision info)
+    void onCollisionEnter(Collider info)
     {
-        Debug.Log("Collide");
-        SceneManager.LoadScene("Police Mini Game");
+        if(info.name == "P_PoliceCar")
+        {
+            Debug.Log("Coucou");
+        }
     }
 }

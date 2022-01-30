@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace Controller
 {
@@ -34,9 +35,17 @@ namespace Controller
 
         private void OnTriggerEnter(Collider other)
         {
+            Debug.Log(other.name);
             if (other.GetComponentInParent<Tile3D>())
             {
                 Debug.Log("trigger");
+            }
+        }
+        private void OnCollisionEnter(Collision other)
+        {
+            if(other.collider.name == "P_PoliceCar")
+            {
+                SceneManager.LoadSceneAsync("policeMiniGame");
             }
         }
 
