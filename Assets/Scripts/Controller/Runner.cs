@@ -26,14 +26,14 @@ namespace Controller
         {
             bool isGrounded = Physics.Raycast(transform.position, -transform.up, out Hit, 0.02f);
 
-            if (isGrounded && !Hit.collider.isTrigger)
+            /*if (isGrounded && !Hit.collider.isTrigger)
             {
                 _rb.constraints = RigidbodyConstraints.FreezePositionY | RigidbodyConstraints.FreezeRotation;
             }
             else
             {
                 _rb.constraints = RigidbodyConstraints.FreezeRotation;
-            }
+            }*/
 
             if (Hit.collider != null)
             {
@@ -41,10 +41,6 @@ namespace Controller
                 actualRow = Hit.collider.gameObject.GetComponentInParent<Tile3D>().row;
 
                 float centerOfMap = (Hit.collider.gameObject.GetComponentInParent<Tile3D>().map3D.size - 1) / 2;
-                
-                Debug.Log("actual row " + actualRow);
-                Debug.Log("size de la map après calcul " + centerOfMap);
-                Debug.Log("calcul " + Math.Abs(centerOfMap - actualRow));
                 
                 if (Math.Abs(centerOfMap - actualRow) < 0.1)
                 {
