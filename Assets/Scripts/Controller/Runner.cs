@@ -1,4 +1,3 @@
-using System;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -12,19 +11,25 @@ namespace Controller
         
         private Rigidbody _rb;
 
-        // debug only
-        public GameObject helicopter;
-        
         private void Start()
         {
             _rb = GetComponent<Rigidbody>();
-
-            // debug only
-            Instantiate(helicopter, new Vector3(10, 15, 0), Quaternion.identity);
         }
 
         private void Update()
         {
+            RaycastHit Hit;
+            bool isGrounded = Physics.Raycast(transform.position, -transform.up, out Hit, 0.02f);
+
+            if (isGrounded && !Hit.collider.isTrigger)
+            {
+                _rb.constraints = RigidbodyConstraints.FreezePositionY | RigidbodyConstraints.FreezeRotation;
+            }
+            else
+            {
+                _rb.constraints = RigidbodyConstraints.FreezeRotation;
+            }
+            
             if (_rb.velocity.magnitude > maxSpeed)
             {
                 _rb.velocity = _rb.velocity.normalized * maxSpeed;

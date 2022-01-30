@@ -815,10 +815,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 869115616028030732, guid: bf57f4f02b76fe14792b2cb7725852ff, type: 3}
-      propertyPath: m_Material
-      value: 
-      objectReference: {fileID: 13400000, guid: ae754c0c941ded84689ab3b490ca37e7, type: 2}
+    - target: {fileID: 437223659, guid: bf57f4f02b76fe14792b2cb7725852ff, type: 3}
+      propertyPath: m_Constraints
+      value: 112
+      objectReference: {fileID: 0}
     - target: {fileID: 2859271526778608984, guid: bf57f4f02b76fe14792b2cb7725852ff, type: 3}
       propertyPath: m_Name
       value: P_Car
@@ -1130,7 +1130,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2777875530575679161, guid: df68100a4dd39844e8882b25b8545f14, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5064858221486904796, guid: df68100a4dd39844e8882b25b8545f14, type: 3}
       propertyPath: car
@@ -1202,7 +1202,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1025523878
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1220,10 +1220,10 @@ MonoBehaviour:
   angleRoad: {fileID: 1991016995492178097, guid: 62e7a9bc6c9e3bb4e8d56a604a17006a, type: 3}
   threewayRoad: {fileID: 420683500333379766, guid: d130ff413e09d6541ae2ebf61a615c91, type: 3}
   crossRoad: {fileID: 8021982825778730359, guid: 2cea59389e6e5994dbe037ed1731c5e0, type: 3}
-  bollardsObstacle: {fileID: 0}
-  pedestrianObstacle: {fileID: 0}
-  helicopterObstacle: {fileID: 0}
-  tramwayObstacle: {fileID: 0}
+  bollardsObstacle: {fileID: 2531623601116560897, guid: d91c60e3059cd584c9303a2af5b368e0, type: 3}
+  pedestrianObstacle: {fileID: 1369689483592202892, guid: 279a425c405d3ee4d960bcb9661a3791, type: 3}
+  helicopterObstacle: {fileID: 3585347671255732440, guid: fbe41afa0cde98942a99032528c19fbd, type: 3}
+  tramwayObstacle: {fileID: 1369689483592202892, guid: 279a425c405d3ee4d960bcb9661a3791, type: 3}
 --- !u!4 &1025523879
 Transform:
   m_ObjectHideFlags: 0
