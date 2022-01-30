@@ -47,6 +47,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   meshFilter: {fileID: 4561519290546062944}
   meshRenderer: {fileID: 978103515311019198}
+  meshCollider: {fileID: 298512596916357345}
   obstacle: {fileID: 3164016509554743174}
   map3D: {fileID: 0}
   row: 0
@@ -63,6 +64,7 @@ GameObject:
   - component: {fileID: 4561519290546062944}
   - component: {fileID: 978103515311019198}
   - component: {fileID: 8479489242947902673}
+  - component: {fileID: 298512596916357345}
   m_Layer: 0
   m_Name: Road
   m_TagString: Untagged
@@ -146,6 +148,20 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 10, y: 5, z: 10}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!64 &298512596916357345
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4184923207755882435}
+  m_Material: {fileID: 13400000, guid: ae754c0c941ded84689ab3b490ca37e7, type: 2}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 0}
 --- !u!1001 &8676223643461438010
 PrefabInstance:
   m_ObjectHideFlags: 0

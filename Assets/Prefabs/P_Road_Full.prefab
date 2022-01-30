@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 3172945602308084797}
   - component: {fileID: 1992643426679069592}
   - component: {fileID: 4342523280333860690}
+  - component: {fileID: -5131761330949656053}
   - component: {fileID: 3719032313228034284}
   m_Layer: 0
   m_Name: P_Road_Full
@@ -82,6 +83,20 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &-5131761330949656053
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2829177121799556743}
+  m_Material: {fileID: 13400000, guid: ae754c0c941ded84689ab3b490ca37e7, type: 2}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4599424352810992742, guid: 15c9a578f9cbc4040ac1a24a20627f19, type: 3}
 --- !u!65 &3719032313228034284
 BoxCollider:
   m_ObjectHideFlags: 0
