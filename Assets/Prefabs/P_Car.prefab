@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 3235269952457361378}
   - component: {fileID: 437223654}
   - component: {fileID: 437223659}
+  - component: {fileID: 1494733662983225300}
   - component: {fileID: 1966427567187052615}
   - component: {fileID: 4372661251867196557}
-  - component: {fileID: 437223658}
   m_Layer: 0
   m_Name: P_Car
   m_TagString: Untagged
@@ -49,8 +49,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 32de5f0c1f02a8544ab7226975495beb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 3
-  rotationSpeed: 0.5
+  moveSpeed: 10
+  rotationSpeed: 1
   maxSpeed: 5
   helicopter: {fileID: 3585347671255732440, guid: fbe41afa0cde98942a99032528c19fbd, type: 3}
 --- !u!54 &437223659
@@ -69,6 +69,20 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 80
   m_CollisionDetection: 0
+--- !u!64 &1494733662983225300
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2859271526778608984}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -8039613103989778838, guid: 4c8a2392de79b2c42b935f324664a55a, type: 3}
 --- !u!33 &1966427567187052615
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -118,19 +132,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &437223658
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2859271526778608984}
-  m_Material: {fileID: 13400000, guid: ae754c0c941ded84689ab3b490ca37e7, type: 2}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1.4353204, y: 1.3260043, z: 2.5285869}
-  m_Center: {x: -0.000767231, y: 0.6555122, z: 0.011192381}
 --- !u!1 &7584914961744355055
 GameObject:
   m_ObjectHideFlags: 0

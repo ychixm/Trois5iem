@@ -819,10 +819,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: P_Car
       objectReference: {fileID: 0}
-    - target: {fileID: 2859271526778608984, guid: bf57f4f02b76fe14792b2cb7725852ff, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 3235269952457361378, guid: bf57f4f02b76fe14792b2cb7725852ff, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -1992,10 +1988,10 @@ Transform:
   - {fileID: 1034261626}
   - {fileID: 1625268077}
   - {fileID: 681876232}
-  - {fileID: 1044723462}
   - {fileID: 355499014}
-  - {fileID: 1404779133}
+  - {fileID: 1044723462}
   - {fileID: 879056134}
+  - {fileID: 1404779133}
   - {fileID: 739149401}
   - {fileID: 1115590864}
   - {fileID: 828239519}
