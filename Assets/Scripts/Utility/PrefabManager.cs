@@ -10,6 +10,11 @@ public class PrefabManager : Singleton<PrefabManager> {
     public GameObject threewayRoad;
     public GameObject crossRoad;
 
+    public GameObject bollardsObstacle;
+    public GameObject pedestrianObstacle;
+    public GameObject helicopterObstacle;
+    public GameObject tramwayObstacle;
+
     public GameObject GetRoad(int flag) {
         if (flag == 5 || flag == 10) {
             return straightRoad;
@@ -22,6 +27,28 @@ public class PrefabManager : Singleton<PrefabManager> {
         } else {
             return emptyRoad;
         }
+    }
+
+    public GameObject GetObstacle(ObstacleType type) {
+
+        switch (type) {
+            case ObstacleType.Bollards:
+                return bollardsObstacle;
+            case ObstacleType.Pedestrian:
+                return pedestrianObstacle;
+            case ObstacleType.Helicopter:
+                return helicopterObstacle;
+        }
+
+        return null;
+    }
+
+    public enum ObstacleType {
+
+        Bollards,
+        Pedestrian,
+        Helicopter
+
     }
 
 }

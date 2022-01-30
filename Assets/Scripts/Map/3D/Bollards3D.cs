@@ -1,8 +1,8 @@
 using UnityEngine;
 using Random = UnityEngine.Random;
 
-public class Bitts3D : MonoBehaviour
-{
+public class Bollards3D : Obstacle3D {
+
     private bool _isLifted;
 
     private void Start()
@@ -35,5 +35,9 @@ public class Bitts3D : MonoBehaviour
                 transform.Translate(Vector3.down * Time.deltaTime * 2f);    
             }
         }
+    }
+
+    public override void OnNotify() {
+
     }
 }
