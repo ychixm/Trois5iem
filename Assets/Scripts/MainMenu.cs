@@ -17,6 +17,7 @@ public class MainMenu : MonoBehaviour
     public void OnClickQuit()
     {
         Application.Quit();
+        Debug.Log("Quit");
     }
 
     public void OnClickCredits()
@@ -24,4 +25,10 @@ public class MainMenu : MonoBehaviour
         CreditCanvas.SetActive(true);
         MainMenuCanvas.SetActive(false);
     }
+
+    public void OnClickReturn()
+    {
+        CreditCanvas.SetActive(false);
+        MainMenuCanvas.SetActive(true);
+    } 
 }
